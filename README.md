@@ -24,4 +24,4 @@ step2 minimum 200 episodes for results
 python evaluate.py  _  model_ep--
 
 ## WIP:
-test simulation results against benchmark regressor while analyzing data within 15 minute - 9 year windows. LINEAR REGRESSOR IPYNB NOTEBOOK WILL BE THE BENCHMARK MODEL USING LINEAR REGRESSION AND TIME SERIES CROSS VALIDATION.. AND COMPARE IT TO THE BACKTEST SIMULATION RESULTS OVER A 
+test simulation results against benchmark regressor while analyzing data within 15 minute - 9 year windows. LINEAR REGRESSOR IPYNB NOTEBOOK WILL BE THE BENCHMARK MODEL USING LINEAR REGRESSION AND TIME SERIES CROSS VALIDATION.. AND COMPARE IT TO THE BACKTEST SIMULATION RESULTS 
