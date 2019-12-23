@@ -38,7 +38,7 @@ for e in range(episode_count + 1):
 	state = getState(data, 0, window_size + 1)
 	total_profit = 0
 	agent.inventory = []
-	starting_balance = 6.27 #10.00000
+	starting_balance = 500.00 #10.00000
 	print('starting balance {}'.format(starting_balance))
 	buying_power = 12
 	for t in range(l):
