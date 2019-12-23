@@ -18,7 +18,7 @@ Step 1: python fulldataimport.py
 
 step1 will extract the text files and real time intraday cryptocurrency data into the data format suitable for the machine learning simulation environment for the Deep Q Network.
 
-2:python train.py data/(crypto/** oror stocks/) _ -
+2:python train.py data/(crypto/** or stocks/) _ -
 step2 minimum 200 episodes for results
 
 python evaluate.py  _  model_ep--
