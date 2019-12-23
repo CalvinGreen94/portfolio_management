@@ -4,24 +4,6 @@ import os
 from coinbase.wallet.client import Client
 import json
 # Before implementation, set environmental variables with the names API_KEY and API_SECRET
-api_key = 'u6Ni9BqAj46es5jE'
-api_secret = 'BDo0b1p3UsiTCqhHjYMprsfSE9mS9IxL'
-
-client = Client(api_key, api_secret)
-user = client.get_current_user()
-# user_as_json_string = json.dumps(user)
-# accounts = client.get_accounts()
-# assert isinstance(accounts.data, list)
-# assert accounts[0] is accounts.data[0]
-# assert len(accounts[::]) == len(accounts.data)
-accounts = client.get_account('a5169272-8826-58ca-9f7d-b827785f7cd6')
-# accounts = client.get_accounts()
-print(accounts)
-assert (accounts.warnings is None) or isinstance(accounts.warnings, list)
-# accounts = client.get_accounts()
-assert (accounts.pagination is None) or isinstance(accounts.pagination, dict)
-print(client.get_buy_price(currency_pair = 'XRP-USD'))
-print(client.get_sell_price(currency_pair = 'XRP-USD'))
 # client.deposit(account_id, amount='10', currency='USD')
 # client.buy(account_id, amount='5', currency='XRP')
 # client.sell(account_id, amount='1', currency='XRP')
