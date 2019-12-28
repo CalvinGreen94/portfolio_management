@@ -6,7 +6,7 @@ As a result of the short-term state representation, the model is not very good a
 
 ## Results
 
-Results of the examples included in datasets feature rewards, test scores, and actions for the state of a given stock price. Also, implematation of forecasting  will be considered for more precise actions into the future of the market. This model will be used for the AI trading bot via coinbase api keys.
+Results of the examples included in datasets feature rewards, test scores, and actions for the state of a given stock price. Also, implementation of forecasting  will be considered for more precise actions into the future of the market. This model will be used for the AI trading bot via coinbase api keys.
 
 
 ## Running the Code
