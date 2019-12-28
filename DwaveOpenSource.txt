@@ -1,0 +1,1 @@
+This network could not be completed without the help of Keras, Pandas, Beautiful Soup, Yahoo Finance, and Dwave Open Source Quantum Computing API.
