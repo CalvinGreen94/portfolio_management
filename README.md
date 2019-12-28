@@ -21,7 +21,7 @@ directory :
 
 step1 will extract the text files and real time intraday cryptocurrency data into the data format suitable for the machine learning simulation environment for the Deep Q Network.
 
-portfolio_management> python train#.py crypto/** oror stocks/) 200 (windows of days) 200 (episodes)
+portfolio_management> python train#.py (crypto/crypto_portfolio/**.csv or stocks/stocks_portfolio/**.csv) 200 (windows of days) 200 (episodes)
 step2 minimum 200 episodes for results
 
 python evaluate.py  200  model_ep200
