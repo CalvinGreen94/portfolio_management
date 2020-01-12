@@ -32,6 +32,7 @@ plt.plot(data)
 plt.xlabel('time (m)')
 plt.ylabel('price')
 plt.show()
+plt.savefig('images/20-100_moving_avg.png')
 plt.close
 for e in range(episode_count + 1):
 	print("Episode " + str(e) + "/" + str(episode_count))
