@@ -1,30 +1,31 @@
 ## Overview
 
-This is the ProjectGamma.AI Python 3.6 code for implementing a Deep Q neural networks as well as D-WAVE open source Leap computing platform for algorithmic trading within the Stocks/Cryptocurrency markets.It's implementation of Q-learning applied to (short-term) stock trading. The model uses n-day windows of LOW prices (OHLCV) to determine if the best action to take at a given time is to buy, sell or hold.
+This is the ProjectGamma.AI Python 3.6 code for implementing a Deep Q neural networks for algorithmic trading within the Futures market.It's implementation of Q-learning applied to (short-term) stock trading. The model uses n-day windows of LOW prices (OHLC) to determine if the best action to take at a given time is to buy, sell or hold.
 
-As a result of the short-term state representation, the model is not very good at making decisions over long-term t. Implementing multiple DQN agents over various market tickers.. The main thing to consider is the size of the data and how it will be engineered to achieve the most optimal predicted future price.
 
 ## Results
 
-Results of the examples included in datasets feature rewards, test scores, and actions for the state of a given stock price. Also, implementation of forecasting  will be considered for more precise actions into the future of the market. This model will be used for the AI trading bot via coinbase api keys.
+Results of the examples included in datasets feature rewards, test scores, and actions for the state of a given stock price. Also, implematation of forecasting  will be considered for more precise actions into the future of the market.
 
 
 ## Running the Code
-** = STOCK/CRYPTO
-_ = window(# of days)
--- = episodes
-directory :
+75 = window(# of days)
+200 = episodes
 
---- cd: path/to/portfolio_management
--- cd portfolio_management
-- portfolio_management> python fulldataimport.py
+Step 1: python fulldataimport.py
+(if in a rush remove the stock import feed)
 
 step1 will extract the text files and real time intraday cryptocurrency data into the data format suitable for the machine learning simulation environment for the Deep Q Network.
 
-portfolio_management> python train#.py crypto/** or stocks/) 200 (windows of days) 200 (episodes)
-step2 minimum 200 episodes for results
+2:
+portfolio_management > python train2.py crypto/crypto_portfolio/15m/bitfinex_ethusd 75 200
+portfolio_management > python train2.py crypto/crypto_portfolio/5m/bitfinex_ethusd 25 200
 
-python evaluate.py  200  model_ep200
+minimum 200 episodes for results
+
+portfolio_management > python evaluate2.py  crypto/crypto_portfolio/15m/bitfinex_ethusd  agent2/model_ep-200
+portfolio_management > python evaluate2.py  crypto/crypto_portfolio/5m/bitfinex_ethusd  agent2/model_ep-200
 
 ## WIP:
-test simulation results against benchmark regressor while analyzing data within 15 minute - 9 year windows. LINEAR REGRESSOR IPYNB NOTEBOOK WILL BE THE BENCHMARK MODEL USING LINEAR REGRESSION AND TIME SERIES CROSS VALIDATION.. AND COMPARE IT TO THE BACKTEST SIMULATION RESULTS. 
+
+Test simulation results against benchmark regressor while analyzing data within 15 minute -5 minute windows. LINEAR REGRESSOR IPYNB NOTEBOOK WILL BE THE BENCHMARK MODEL USING LINEAR REGRESSION AND TIME SERIES CROSS VALIDATION.. AND COMPARE IT TO THE BACKTEST SIMULATION RESULTS. Add in psychology behind the trades. Add indicators (news (sentiment analysis, Boilinger bands, Volume Indicator)).
