@@ -9,7 +9,11 @@ Results of the examples included in datasets feature rewards, test scores, and a
 
 
 ## Running the Code
+
+
 75 = window(# of days)
+
+
 200 = episodes
 
 Step 1: python fulldataimport.py
@@ -21,7 +25,6 @@ step1 will extract the text files and real time intraday cryptocurrency data int
 2:
 
 portfolio_management > python train2.py crypto/crypto_portfolio/15m/bitfinex_ethusd 75 200
-
 
 portfolio_management > python train2.py crypto/crypto_portfolio/5m/bitfinex_ethusd 25 200
 
