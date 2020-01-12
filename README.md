@@ -13,17 +13,20 @@ Results of the examples included in datasets feature rewards, test scores, and a
 200 = episodes
 
 Step 1: python fulldataimport.py
+
 (if in a rush remove the stock import feed)
 
 step1 will extract the text files and real time intraday cryptocurrency data into the data format suitable for the machine learning simulation environment for the Deep Q Network.
 
 2:
+
 portfolio_management > python train2.py crypto/crypto_portfolio/15m/bitfinex_ethusd 75 200
 portfolio_management > python train2.py crypto/crypto_portfolio/5m/bitfinex_ethusd 25 200
 
 minimum 200 episodes for results
 
 portfolio_management > python evaluate2.py  crypto/crypto_portfolio/15m/bitfinex_ethusd  agent2/model_ep-200
+
 portfolio_management > python evaluate2.py  crypto/crypto_portfolio/5m/bitfinex_ethusd  agent2/model_ep-200
 
 ## WIP:
