@@ -5,7 +5,7 @@ This is the ProjectGamma.AI Python 3.6 code for implementing a Deep Q neural net
 
 ## Results
 
-Results of the examples included in datasets feature rewards, test scores, and actions for the state of a given stock price. Also, implematation of forecasting  will be considered for more precise actions into the future of the market.
+Results of the examples included in datasets feature rewards, test scores, and actions for the state of a given stock price. 
 
 
 ## Running the Code
