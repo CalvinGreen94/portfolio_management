@@ -1,6 +1,6 @@
 ## Overview
 
-This is the ProjectGamma.AI Python 3.6 code for implementing a Deep Q neural networks for algorithmic trading within the Futures market.It's implementation of Q-learning applied to (short-term) stock trading. The model uses n-day windows of LOW prices (OHLC) to determine if the best action to take at a given time is to buy, sell or hold.
+This is the ProjectGamma.AI Python 3.6 code for implementing a Deep Q neural networks for algorithmic trading within the Futures market.It's implementation of Q-learning applied to (short-term) stock trading. The model uses n-day windows of LOW prices (Time,Open,High,Low,Close,Volume) to determine if the best action to take at a given time is to buy, sell or hold.
 
 
 ## Results
