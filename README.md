@@ -18,6 +18,8 @@ Results of the examples included in datasets feature rewards, test scores, and a
 
 Step 1: python fulldataimport.py
 
+
+--> OPEN "Linear_Reg__.ipynb" -- this is the benchmark model for analyzing and predicted time segments between 15-5 minutes.
 (if in a rush remove the stock import feed)
 
 step1 will extract the text files and real time intraday cryptocurrency data into the data format suitable for the machine learning simulation environment for the Deep Q Network.
