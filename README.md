@@ -32,6 +32,9 @@ portfolio_management > python train2.py crypto/crypto_portfolio/5m/bitfinex_ethu
 
 minimum 200 episodes for results
 
+TRAINING MODELS CAN BE RAN AT THE SAME TIME
+
+
 portfolio_management > python evaluate2.py  crypto/crypto_portfolio/15m/bitfinex_ethusd  agent2/model_ep-200
 
 portfolio_management > python evaluate2.py  crypto/crypto_portfolio/5m/bitfinex_ethusd  agent2/model_ep-210
