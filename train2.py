@@ -66,8 +66,8 @@ for e in range(episode_count + 1):
 		agent.memory.append((state, action, reward, next_state, done))
 
 		state = next_state
-		s = pd.DataFrame(state)
-		s = s.to_csv('state.csv')
+# 		s = pd.DataFrame(state)
+# 		s = s.to_csv('state.csv')
 		if done:
 			print("--------------------------------")
 			print("Total Profit: " + formatPrice(total_profit))

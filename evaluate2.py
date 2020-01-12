@@ -8,11 +8,12 @@ from functions import *
 import sys
 
 if len(sys.argv) != 3:
-	print("Usage: python evaluate.py [stock] [model]")
-	exit()
+	print("Usage: python evaluate2.py [stock] [model]")
 
+	exit()
+print("Example: python evaluate2.py crypto/crypto_portfolio/bitfinex_ethusd agent2/model_ep-200")
 stock_name, model_name = sys.argv[1], sys.argv[2]
-model = load_model("models/agent2" + model_name)
+model = load_model("models/" + model_name)
 window_size = model.layers[0].input.shape.as_list()[1]
 
 agent = Agent(window_size, True, model_name)
@@ -23,10 +24,10 @@ batch_size = 32
 state = getState(data, 0, window_size + 1)
 total_profit = 0
 agent.inventory = []
-
+starting_balance = 1500.00 #10.00000
+print('starting balance {}'.format(starting_balance))
 for t in range(l):
 	action = agent.act(state)
-
 	# sit
 	next_state = getState(data, t + 1, window_size + 1)
 	reward = 0
@@ -49,4 +50,6 @@ for t in range(l):
 	if done:
 		print("--------------------------------")
 		print(stock_name + " Total Profit: " + formatPrice(total_profit))
+		print("ENDING BALANCE ${:.2f}".format(starting_balance+total_profit))
 		print("--------------------------------")
+		print('action {}'.format(action))

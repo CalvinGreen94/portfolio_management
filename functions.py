@@ -31,7 +31,7 @@ def getStockDataVec(key):
 	print(len(lines))
 
 	for line in lines[1:]:
-		vec.append(float(line.split(",")[3])) #LOW
+		vec.append(float(line.split(",")[3])) #HIGH
 		# print('initializing 20 second moving average')
 		# a = moving_20average(vec)
 		# print('initializing 100 second moving average')

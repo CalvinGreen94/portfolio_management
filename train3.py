@@ -38,9 +38,6 @@ for e in range(episode_count + 1):
 	state = getState(data, 0, window_size + 1)
 	total_profit = 0
 	agent.inventory = []
-	starting_balance = 500.00 #10.00000
-	print('starting balance {}'.format(starting_balance))
-	buying_power = 12
 	for t in range(l):
 		action = agent.act(state)
 		# hold
@@ -49,9 +46,8 @@ for e in range(episode_count + 1):
 		#buy
 		if action == 1:
 			agent.inventory.append(data[t])
-			print('CURRENT PRICE ${:.5f}'.format(data[t]))
-			print("Buy: " + formatPrice(data[t]*starting_balance/buying_power))
-			print('Current Balance ${:.5f}'.format(data[t]-starting_balance))
+			print('CURRENT PRICE {}'.format(data[t]))
+			print("Buy: " + formatPrice(data[t]))
 		# sell
 		elif action == 2 and len(agent.inventory) > 0:
 			bought_price = agent.inventory.pop(0)
@@ -63,7 +59,6 @@ for e in range(episode_count + 1):
 			print("--------------------------------")
 			print("Total Profit: " + formatPrice(total_profit))
 			print("--------------------------------")
-			print('CURRENT BALANCE ${:.5f}'.format(starting_balance+total_profit))
 
 		# a2 = pd.DataFrame(action)
 		# a2 = pd.to_csv('SellPrice.csv')
@@ -71,8 +66,8 @@ for e in range(episode_count + 1):
 		agent.memory.append((state, action, reward, next_state, done))
 
 		state = next_state
-		s = pd.DataFrame(state)
-		s = s.to_csv('state.csv')
+# 		s = pd.DataFrame(state)
+# 		s = s.to_csv('state.csv')
 		if done:
 			print("--------------------------------")
 			print("Total Profit: " + formatPrice(total_profit))

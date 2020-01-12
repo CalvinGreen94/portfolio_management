@@ -27,81 +27,81 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import yfinance as yf
 
-data = yf.download("AR", start="2010-01-03", end="2019-12-23")
+data = yf.download("AR", start="2010-01-03", end="2020-1-11")
 data = pd.DataFrame(data)
 # data = data.drop(['Adj Close'],axis=1)
 print(data.tail())
-data = data.to_csv('data/stocks/chase_stocks_portfolio/AR.csv')
+data = data.to_csv('data/stocks/stocks_portfolio/AR.csv')
 print('RETRIEVING DAILY STOCK DATA FOR {}'.format(str('AR')))
 
-data = yf.download("CHK", start="2010-01-03", end="2019-12-23")
+data = yf.download("CHK", start="2010-01-03", end="2020-1-11")
 data = pd.DataFrame(data)
 # data = data.drop(['Adj Close'],axis=1)
 print(data.tail())
-data = data.to_csv('data/stocks/chase_stocks_portfolio/CHK.csv')
+data = data.to_csv('data/stocks/stocks_portfolio/CHK.csv')
 print('RETRIEVING DAILY STOCK DATA FOR {}'.format(str('CHK"')))
 
-data = yf.download("PCG", start="2010-01-03", end="2019-12-23")
+data = yf.download("PCG", start="2010-01-03", end="2020-1-11")
 data = pd.DataFrame(data)
 # data = data.drop(['Adj Close'],axis=1)
 print(data.tail())
-data = data.to_csv('data/stocks/chase_stocks_portfolio/PCG.csv')
+data = data.to_csv('data/stocks/stocks_portfolio/PCG.csv')
 print('RETRIEVING DAILY STOCK DATA FOR {}'.format(str('PCG"')))
 
-data = yf.download("SPY", start="2010-01-03", end="2019-12-23")
+data = yf.download("SPY", start="2010-01-03", end="2020-1-11")
 data = pd.DataFrame(data)
 # data = data.drop(['Adj Close'],axis=1)
 print(data.tail())
-data = data.to_csv('data/stocks/chase_stocks_portfolio/SPY.csv')
+data = data.to_csv('data/stocks/stocks_portfolio/SPY.csv')
 print('RETRIEVING DAILY STOCK DATA FOR {}'.format(str('SPY')))
 
-data = yf.download("AAPL", start="2010-01-03", end="2019-12-23")
+data = yf.download("AAPL", start="2010-01-03", end="2020-1-11")
 data = pd.DataFrame(data)
 # data = data.drop(['Adj Close'],axis=1)
 print(data.tail())
-data = data.to_csv('data/stocks/chase_stocks_portfolio/AAPL.csv')
+data = data.to_csv('data/stocks/stocks_portfolio/AAPL.csv')
 print('RETRIEVING DAILY STOCK DATA FOR {}'.format(str('AAPL')))
 
-data = yf.download("EA", start="2010-01-03", end="2019-12-23")
+data = yf.download("EA", start="2010-01-03", end="2020-1-11")
 data = pd.DataFrame(data)
 # data = data.drop(['Adj Close'],axis=1)
 print(data.tail())
-data = data.to_csv('data/stocks/chase_stocks_portfolio/EA.csv')
+data = data.to_csv('data/stocks/stocks_portfolio/EA.csv')
 print('RETRIEVING DAILY STOCK DATA FOR {}'.format(str('EA')))
 
-data = yf.download("FB", start="2010-01-03", end="2019-12-23")
+data = yf.download("FB", start="2010-01-03", end="2020-1-11")
 data = pd.DataFrame(data)
 # data = data.drop(['Adj Close'],axis=1)
 print(data.tail())
-data = data.to_csv('data/stocks/chase_stocks_portfolio/FB.csv')
+data = data.to_csv('data/stocks/stocks_portfolio/FB.csv')
 print('RETRIEVING DAILY STOCK DATA FOR {}'.format(str('FB')))
 
-data = yf.download("ROKU", start="2010-01-03", end="2019-12-23")
+data = yf.download("ROKU", start="2010-01-03", end="2020-1-11")
 data = pd.DataFrame(data)
 # data = data.drop(['Adj Close'],axis=1)
 print(data.tail())
-data = data.to_csv('data/stocks/chase_stocks_portfolio/ROKU.csv')
+data = data.to_csv('data/stocks/stocks_portfolio/ROKU.csv')
 print('RETRIEVING DAILY STOCK DATA FOR {}'.format(str('ROKU')))
 
-data = yf.download("SIRI", start="2010-01-03", end="2019-12-23")
+data = yf.download("SIRI", start="2010-01-03", end="2020-1-11")
 data = pd.DataFrame(data)
 # data = data.drop(['Adj Close'],axis=1)
 print(data.tail())
-data = data.to_csv('data/stocks/chase_stocks_portfolio/SIRI.csv')
+data = data.to_csv('data/stocks/stocks_portfolio/SIRI.csv')
 print('RETRIEVING DAILY STOCK DATA FOR {}'.format(str('SIRI')))
 
-data = yf.download("XOM", start="2010-01-03", end="2019-12-23")
+data = yf.download("XOM", start="2010-01-03", end="2020-1-11")
 data = pd.DataFrame(data)
 # data = data.drop(['Adj Close'],axis=1)
 print(data.tail())
-data = data.to_csv('data/stocks/chase_stocks_portfolio/XOM.csv')
+data = data.to_csv('data/stocks/stocks_portfolio/XOM.csv')
 print('RETRIEVING DAILY STOCK DATA FOR {}'.format(str('XOM')))
 
-data = yf.download("^GSPC", start="2010-01-03", end="2019-12-23")
+data = yf.download("^GSPC", start="2010-01-03", end="2020-1-11")
 data = pd.DataFrame(data)
 # data = data.drop(['Adj Close'],axis=1)
 print(data.tail())
-data = data.to_csv('data/stocks/chase_stocks_portfolio/^GSPC.csv')
+data = data.to_csv('data/stocks/stocks_portfolio/^GSPC.csv')
 print('RETRIEVING DAILY STOCK DATA FOR {}'.format(str('^GSPC')))
 # plotly.tools.set_credentials_file(username='Gamma-AI1011', api_key='KoXH9I7ffpwUueVaa7TT')
 # Cov = pd.read_csv("futures_data/6B 09-19.Last.txt", sep=';', header=None)
@@ -326,13 +326,13 @@ result = api_v2.candles()
 time_step = 60000000
  # Define query parameters
 pair = 'btcusd' # Currency pair of interest
-bin_size = '1d' # This will return minute data
+bin_size = '15m' # This will return minute data
 limit = 1000    # We want the maximum of 1000 data points
 # Define the start date
-t_start = datetime.datetime(2010, 1, 3, 0, 0) 
+t_start = datetime.datetime(2020, 1, 9, 0, 0)
 t_start = time.mktime(t_start.timetuple()) * 1000
 # Define the end date
-t_stop = datetime.datetime(2019, 12, 23, 0, 0)
+t_stop = datetime.datetime(2020, 1, 12, 0, 0)
 t_stop = time.mktime(t_stop.timetuple()) * 1000
 result = api_v2.candles(symbol=pair, interval=bin_size,
                         limit=limit, start=t_start, end=t_stop)
@@ -351,8 +351,61 @@ def fetch_data(start, stop, symbol, interval, tick_limit, step):
         time.sleep(2)
     return data
 api_v1 = bitfinex.bitfinex_v1.api_v1()
-pairs = ['btcusd','xtzusd','oxtusd','xlmusd','xrpusd','zecusd','ethusd','etcusd','ltcusd','daiusd','eosusd']#api_v1.symbols()
-save_path = 'data/crypto/chase_crypto_portfolio'
+pairs = ['ethusd']#api_v1.symbols() #['btcusd','xtzusd','oxtusd','xlmusd','xrpusd','zecusd','ethusd','etcusd','ltcusd','daiusd','eosusd']
+save_path = 'data/crypto/crypto_portfolio/15m'
+if os.path.exists(save_path) is False:
+    os.mkdir(save_path)
+for pair in pairs:
+    pair_data = fetch_data(start=t_start, stop=t_stop, symbol=pair, interval=bin_size, tick_limit=limit, step=time_step)
+    # Remove error messages
+    ind = [np.ndim(x) != 0 for x in pair_data]
+    pair_data = [i for (i, v) in zip(pair_data, ind) if v]
+    #Create pandas data frame and clean data
+    names = ['time', 'open', 'high', 'low', 'close', 'volume']
+    df = pd.DataFrame(pair_data, columns=names)
+    df.drop_duplicates(inplace=True)
+    # df['time'] = pd.to_datetime(df['time'], unit='ms')
+    df.set_index('time', inplace=True)
+    df.sort_index(inplace=True)
+    print('Done downloading data. Saving to .csv.')
+    df.to_csv('{}/bitfinex_{}.csv'.format(save_path, pair))
+    print('Done saving pair{}. Moving to next pair.'.format(pair))
+    # df.drop(['volume'],axis=1)
+print('Done retrieving data')
+
+print('DOWNLOADING BITCOIN PAIRS DATA')
+api_v2 = bitfinex.bitfinex_v2.api_v2()
+result = api_v2.candles()
+time_step = 60000000
+ # Define query parameters
+pair = 'btcusd' # Currency pair of interest
+bin_size = '5m' # This will return minute data
+limit = 1000    # We want the maximum of 1000 data points
+# Define the start date
+t_start = datetime.datetime(2020, 1, 9, 0, 0)
+t_start = time.mktime(t_start.timetuple()) * 1000
+# Define the end date
+t_stop = datetime.datetime(2020, 1, 12, 0, 0)
+t_stop = time.mktime(t_stop.timetuple()) * 1000
+result = api_v2.candles(symbol=pair, interval=bin_size,
+                        limit=limit, start=t_start, end=t_stop)
+# result =  pd.DataFrame(list_of_rows,columns=['PRICES','PRICE:'])
+def fetch_data(start, stop, symbol, interval, tick_limit, step):
+    api_v2 = bitfinex.bitfinex_v2.api_v2()
+    data = []
+    start = start - step
+    while start < stop:
+        start = start + step
+        end = start + step
+        res = api_v2.candles(symbol=symbol, interval=interval,
+                             limit=tick_limit, start=start,
+                             end=end)
+        data.extend(res)
+        time.sleep(2)
+    return data
+api_v1 = bitfinex.bitfinex_v1.api_v1()
+pairs = ['ethusd']#api_v1.symbols() #['btcusd','xtzusd','oxtusd','xlmusd','xrpusd','zecusd','ethusd','etcusd','ltcusd','daiusd','eosusd']
+save_path = 'data/crypto/crypto_portfolio/5m'
 if os.path.exists(save_path) is False:
     os.mkdir(save_path)
 for pair in pairs:

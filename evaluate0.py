@@ -29,9 +29,9 @@ batch_size = 32
 state = getState(data, 0, window_size + 1)
 total_profit = 0
 agent.inventory = []
-starting_balance = .2961 #10.00000
+starting_balance = 1500.00 #10.00000
 print('starting balance {}'.format(starting_balance))
-buying_power = .0002
+# buying_power = .0002
 for t in range(l):
 	action = agent.act(state)
 	# sit
@@ -56,4 +56,6 @@ for t in range(l):
 	if done:
 		print("--------------------------------")
 		print(stock_name + " Total Profit: " + formatPrice(total_profit))
+		print("ENDING BALANCE ${:.2f}".format(starting_balance+total_profit))
 		print("--------------------------------")
+		print('action {}'.format())
