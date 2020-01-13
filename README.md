@@ -16,7 +16,11 @@ Results of the examples included in datasets feature rewards, test scores, and a
 
 200 = episodes
 
-Step 1: python fulldataimport.py
+Step 1:
+
+portfolio_management>python fulldataimport.py
+
+--> OPEN "01-feature-selection.ipynb". This is the quantum feature selection algorithm
 
 
 --> OPEN "Linear_Reg__.ipynb" -- this is the benchmark model for analyzing and predicted time segments between 15-5 minutes.
