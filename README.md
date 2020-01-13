@@ -37,7 +37,7 @@ TRAINING MODELS CAN BE RAN AT THE SAME TIME BUT HIGHLY UNRECOMMENDED.
 
 portfolio_management > python evaluate2.py  crypto/crypto_portfolio/15m/bitfinex_ethusd  agent2/model_ep-200
 
-portfolio_management > python evaluate2.py  crypto/crypto_portfolio/5m/bitfinex_ethusd  agent2/model_ep-210
+portfolio_management > python evaluate2.py  crypto/crypto_portfolio/5m/bitfinex_ethusd  agent2/model_ep-200
 
 ## WIP:
 
