@@ -20,15 +20,18 @@ Step 1:
 
 portfolio_management>python fulldataimport.py
 
---> OPEN "01-feature-selection.ipynb". This is the quantum feature selection algorithm
-
-
---> OPEN "Linear_Reg__.ipynb" -- this is the benchmark model for analyzing and predicted time segments between 15-5 minutes.
 (if in a rush remove the stock import feed)
 
 step1 will extract the text files and real time intraday cryptocurrency data into the data format suitable for the machine learning simulation environment for the Deep Q Network.
 
 2:
+
+
+--> OPEN "01-feature-selection.ipynb". This is the quantum feature selection algorithm
+
+
+--> OPEN "Linear_Reg__.ipynb" -- this is the benchmark model for analyzing and predicted time segments between 15-5 minutes.
+
 
 portfolio_management > python train2.py crypto/crypto_portfolio/15m/bitfinex_ethusd 75 200
 
