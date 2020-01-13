@@ -1,6 +1,6 @@
 ## Overview
 
-This is the ProjectGamma.AI Python 3.6 code for implementing a Deep Q neural networks for algorithmic trading within the cryptocurrency/stock market.It's implementation of Q-learning applied to (short-term) stock trading. The model uses n-day windows of High prices (Given that is the quantum algorithm decision for choosing the feature at the time) (Time,Open,High,Low,Close,Volume) to determine if the best action to take at a given time is to buy, sell or hold.
+This is Python 3.6 code for implementing a Deep Q neural networks for algorithmic trading within the cryptocurrency/stock market.It's implementation of Q-learning applied to (short-term) stock trading. The model uses n-day windows of High prices (Given that is the quantum algorithm decision for choosing the feature at the time) (Time,Open,High,Low,Close,Volume) to determine if the best action to take at a given time is to buy, sell or hold.
 
 
 ## Results
