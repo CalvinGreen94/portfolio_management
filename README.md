@@ -49,3 +49,5 @@ portfolio_management > python evaluate2.py  crypto/crypto_portfolio/5m/bitfinex_
 ## WIP:
 
 Test simulation results against benchmark regressor while analyzing data within 15 minute -5 minute windows. LINEAR REGRESSOR IPYNB NOTEBOOK WILL BE THE BENCHMARK MODEL USING LINEAR REGRESSION AND TIME SERIES CROSS VALIDATION.. AND COMPARE IT TO THE BACKTEST SIMULATION RESULTS. Add in psychology behind the trades. Add indicators (news (sentiment analysis, Boilinger bands, Volume Indicator)).
+
+OVERALL model_ep-200 WILL BE USED VIA COINBASE API KEYS FOR ALGORITHMIC TRADING
