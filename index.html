@@ -1,0 +1,141 @@
+<html>
+
+<head>
+  <title>Eth Pred</title>
+
+  <link rel="stylesheet" media="all"
+    href="https://cdnjs.cloudflare.com/ajax/libs/authy-form-helpers/2.3/form.authy.min.css"
+    data-turbolinks-track="reload" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/authy-form-helpers/2.3/form.authy.min.js"
+    data-turbolinks-track="reload"></script>
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css5/bootstrap.min.css') }}"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css5/style.scss') }}"> 
+
+  <!-- <link rel="icon" type="image/x-icon" href="/static/favicon.ico"> -->
+
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    div {
+      text-align: center;
+    }
+    #ip2 {
+      border-radius: 25px;
+    border: 2px solid #609;
+    padding: 20px; 
+    width: 200px;
+    height: 15px;     
+}
+
+#ip3 {
+    border-radius: 15px 50px 30px 5px;
+    background: #609;
+    padding: 20px; 
+    width: 200px;
+    height: 15px; 
+}
+
+#ip4 {
+    border-radius: 15px 50px 30px;
+    border: 2px solid #609;
+    padding: 20px; 
+    width: 200px;
+    height: 15px; 
+}
+
+#ip5 {
+    border-radius: 15px 50px;
+    background: #609;
+    padding: 20px; 
+    width: 200px;
+    height: 15px; 
+} 
+
+#ip6 {
+    border-radius: 50%;
+    border: 2px solid #609;
+    padding: 20px; 
+    width: 200px;
+    height: 15px;
+} 
+
+
+  </style>
+
+  <style>
+    .bordered {
+      width: 500px;
+      height: 300px;
+      padding: 20px;
+      border: 1px solid black;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<header>
+</header>
+
+
+
+<body>
+  <!-- <h1>{{message}}</h1> -->
+  <div>
+  </div>
+  <header>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Ethereum Predictions</h5>
+
+      </div>
+    </div>
+  </header>
+<div>
+  Ethereum Predictions <br />
+  <h7>Contracts Loading...</h7>>
+</div>
+  <br />
+  <div class="card">
+    <div class="card-body">
+          <div>
+          </div>
+          <!-- </a>  -->
+          <br />
+
+        </div>
+
+
+          <form action="/predict_ethereum" accept-charset="UTF-8" method="post">
+        
+              <br />
+              <div style="border: thick double black">
+               
+                <button type="submit" class=" btn-block btn-large">
+                  <h7>Fetch Predictions </h7>
+                </button>
+
+                <!-- {{transactions}} <br /> {{block}} -->
+        
+    </form>
+    <br />
+    1 minute chart Predictions, Data will be updated every hour
+   <br />Open Prediction: {{o}}->accuracy{{o_acc}}<br />
+   <br />High Prediction: {{h}}->accuracy{{h_acc}}<br />
+   <br />Low Prediction: {{l}}->accuracy{{l_acc}}<br />
+   <br />Close Prediction: {{c}}->accuracy{{c_acc}}<br />
+   <br />Order Book: {{order_book}}<br />
+
+  </div>
+</body>
+
+<br /><br />
+</p>
+<br /><br /><br />
+
+</html>
