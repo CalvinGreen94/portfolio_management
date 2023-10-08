@@ -1,0 +1,1165 @@
+<html>
+
+<head>
+  <title>Eth Pred</title>
+
+  <link rel="stylesheet" media="all"
+    href="https://cdnjs.cloudflare.com/ajax/libs/authy-form-helpers/2.3/form.authy.min.css"
+    data-turbolinks-track="reload" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/authy-form-helpers/2.3/form.authy.min.js"
+    data-turbolinks-track="reload"></script>
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css5/bootstrap.min.css') }}"> -->
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css5/style.scss') }}">  -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css_main/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css_main/styleguide.css') }}">
+
+  <!-- <link rel="icon" type="image/x-icon" href="/static/favicon.ico"> -->
+
+  <style>
+    .portfolio {
+      display: flex;
+      height: 1225px;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 0px 165px;
+      position: relative;
+    }
+
+    .portfolio .div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+      position: relative;
+      flex: 1;
+      flex-grow: 1;
+    }
+
+    .portfolio .div-2 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 50px;
+      padding: 40px;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+      background-color: var(--dark-themesection-color);
+      border-radius: 10px;
+    }
+
+    .portfolio .heading {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+    }
+
+    .portfolio .div-3 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      position: relative;
+      flex: 1;
+      flex-grow: 1;
+    }
+
+    .portfolio .text-wrapper {
+      position: relative;
+      align-self: stretch;
+      margin-top: -1px;
+      font-family: var(--heading-web-typography-h5-medium-font-family);
+      font-weight: var(--heading-web-typography-h5-medium-font-weight);
+      color: var(--typography-white);
+      font-size: var(--heading-web-typography-h5-medium-font-size);
+      letter-spacing: var(--heading-web-typography-h5-medium-letter-spacing);
+      line-height: var(--heading-web-typography-h5-medium-line-height);
+      font-style: var(--heading-web-typography-h5-medium-font-style);
+    }
+
+    .portfolio .p {
+      position: relative;
+      align-self: stretch;
+      font-family: var(--paragraph-p1-regular-font-family);
+      font-weight: var(--paragraph-p1-regular-font-weight);
+      color: var(--neutral-500);
+      font-size: var(--paragraph-p1-regular-font-size);
+      letter-spacing: var(--paragraph-p1-regular-letter-spacing);
+      line-height: var(--paragraph-p1-regular-line-height);
+      font-style: var(--paragraph-p1-regular-font-style);
+    }
+
+    .portfolio .clear-filter {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 15px;
+      position: relative;
+      flex: 0 0 auto;
+      border-radius: 5px;
+      border: 1px solid;
+      border-color: #ccced926;
+    }
+
+    .portfolio .icon {
+      position: relative;
+      width: 24px;
+      height: 24px;
+    }
+
+    .portfolio .mask {
+      position: absolute;
+      width: 16px;
+      height: 20px;
+      top: 2px;
+      left: 4px;
+    }
+
+    .portfolio .clear-filter-2 {
+      position: relative;
+      width: fit-content;
+      font-family: var(--paragraph-p1-regular-font-family);
+      font-weight: var(--paragraph-p1-regular-font-weight);
+      color: var(--neutral-500);
+      font-size: var(--paragraph-p1-regular-font-size);
+      letter-spacing: var(--paragraph-p1-regular-letter-spacing);
+      line-height: var(--paragraph-p1-regular-line-height);
+      white-space: nowrap;
+      font-style: var(--paragraph-p1-regular-font-style);
+    }
+
+    .portfolio .payment-details {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      align-self: stretch;
+      width: 100%;
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    .portfolio .price {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    .portfolio .heading-2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+    }
+
+    .portfolio .img {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 1px;
+      left: 2px;
+    }
+
+    .portfolio .text-wrapper-2 {
+      position: relative;
+      width: fit-content;
+      font-family: var(--paragraph-p1-regular-font-family);
+      font-weight: var(--paragraph-p1-regular-font-weight);
+      color: var(--neutralparagraph-gray-500);
+      font-size: var(--paragraph-p1-regular-font-size);
+      letter-spacing: var(--paragraph-p1-regular-letter-spacing);
+      line-height: var(--paragraph-p1-regular-line-height);
+      white-space: nowrap;
+      font-style: var(--paragraph-p1-regular-font-style);
+    }
+
+    .portfolio .frame {
+      align-items: center;
+      gap: 40px;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+      display: flex;
+      position: relative;
+    }
+
+    .portfolio .price-2 {
+      position: relative;
+      width: fit-content;
+      margin-top: -1px;
+      font-family: var(--heading-web-typography-h3-medium-font-family);
+      font-weight: var(--heading-web-typography-h3-medium-font-weight);
+      color: var(--typography-white);
+      font-size: var(--heading-web-typography-h3-medium-font-size);
+      letter-spacing: var(--heading-web-typography-h3-medium-letter-spacing);
+      line-height: var(--heading-web-typography-h3-medium-line-height);
+      white-space: nowrap;
+      font-style: var(--heading-web-typography-h3-medium-font-style);
+    }
+
+    .portfolio .heading-3 {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 5px;
+      position: relative;
+      flex: 0 0 auto;
+      background-color: var(--dark-theme-background-color);
+      border-radius: 4px;
+    }
+
+    .portfolio .icon-2 {
+      position: relative;
+      width: 20px;
+      height: 20px;
+    }
+
+    .portfolio .mask-2 {
+      position: absolute;
+      width: 17px;
+      height: 15px;
+      top: 2px;
+      left: 2px;
+    }
+
+    .portfolio .market-cap {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      position: relative;
+      flex: 1;
+      flex-grow: 1;
+      border-radius: 5px;
+    }
+
+    .portfolio .div-4 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 10px;
+      position: relative;
+      flex: 1;
+      flex-grow: 1;
+      background-color: var(--dark-theme-background-color);
+      border-radius: 5px;
+    }
+
+    .portfolio .icon-3 {
+      position: absolute;
+      width: 20px;
+      height: 15px;
+      top: 5px;
+      left: 2px;
+    }
+
+    .portfolio .price-3 {
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+    }
+
+    .portfolio .text-wrapper-3 {
+      position: relative;
+      width: fit-content;
+      margin-top: -1px;
+      font-family: var(--paragraph-p2-medium-font-family);
+      font-weight: var(--paragraph-p2-medium-font-weight);
+      color: var(--typography-white);
+      font-size: var(--paragraph-p2-medium-font-size);
+      letter-spacing: var(--paragraph-p2-medium-letter-spacing);
+      line-height: var(--paragraph-p2-medium-line-height);
+      white-space: nowrap;
+      font-style: var(--paragraph-p2-medium-font-style);
+    }
+
+    .portfolio .increase-percentage {
+      display: flex;
+      width: 52px;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 3px;
+      position: relative;
+      opacity: 0;
+    }
+
+    .portfolio .text-wrapper-4 {
+      position: relative;
+      width: fit-content;
+      font-family: var(--paragraph-p1-regular-font-family);
+      font-weight: var(--paragraph-p1-regular-font-weight);
+      color: var(--successuse-600);
+      font-size: var(--paragraph-p1-regular-font-size);
+      letter-spacing: var(--paragraph-p1-regular-letter-spacing);
+      line-height: var(--paragraph-p1-regular-line-height);
+      white-space: nowrap;
+      font-style: var(--paragraph-p1-regular-font-style);
+    }
+
+    .portfolio .icon-4 {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      margin-top: -3783.72px;
+      margin-left: -12665px;
+    }
+
+    .portfolio .increase-percentage-2 {
+      display: inline-flex;
+      flex: 0 0 auto;
+      opacity: 0;
+      align-items: center;
+      gap: 3px;
+      position: relative;
+    }
+
+    .portfolio .text-wrapper-5 {
+      position: relative;
+      width: fit-content;
+      font-family: var(--paragraph-p1-regular-font-family);
+      font-weight: var(--paragraph-p1-regular-font-weight);
+      color: var(--warninguse-600);
+      font-size: var(--paragraph-p1-regular-font-size);
+      letter-spacing: var(--paragraph-p1-regular-letter-spacing);
+      line-height: var(--paragraph-p1-regular-line-height);
+      white-space: nowrap;
+      font-style: var(--paragraph-p1-regular-font-style);
+    }
+
+    .portfolio .icon-5 {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      margin-top: -3783.72px;
+      margin-left: -12886.33px;
+    }
+
+    .portfolio .mask-3 {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      top: 3px;
+      left: 3px;
+    }
+
+    .portfolio .increase-percentage-3 {
+      display: flex;
+      width: 52px;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 3px;
+      position: relative;
+    }
+
+    .portfolio .component {
+      position: relative;
+      width: 381px;
+      height: 72px;
+    }
+
+    .portfolio .rectangle {
+      position: absolute;
+      width: 381px;
+      height: 2px;
+      top: 59px;
+      left: 0;
+      background-color: var(--neutral-300);
+    }
+
+    .portfolio .tab {
+      display: flex;
+      width: 352px;
+      align-items: flex-start;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .portfolio .div-5 {
+      display: flex;
+      flex-direction: column;
+      height: 51px;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      position: relative;
+      flex: 1;
+      flex-grow: 1;
+    }
+
+    .portfolio .buy-BTC {
+      position: relative;
+      align-self: stretch;
+      margin-top: -1px;
+      font-family: var(--paragraph-p3-regular-font-family);
+      font-weight: var(--paragraph-p3-regular-font-weight);
+      color: var(--primarycta-700);
+      font-size: var(--paragraph-p3-regular-font-size);
+      text-align: center;
+      letter-spacing: var(--paragraph-p3-regular-letter-spacing);
+      line-height: var(--paragraph-p3-regular-line-height);
+      font-style: var(--paragraph-p3-regular-font-style);
+    }
+
+    .portfolio .rectangle-2 {
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      height: 2px;
+      background-color: var(--primarycta-700);
+    }
+
+    .portfolio .sell-BTC {
+      position: relative;
+      align-self: stretch;
+      margin-top: -1px;
+      font-family: var(--paragraph-p3-regular-font-family);
+      font-weight: var(--paragraph-p3-regular-font-weight);
+      color: var(--neutralparagraph-gray-500);
+      font-size: var(--paragraph-p3-regular-font-size);
+      text-align: center;
+      letter-spacing: var(--paragraph-p3-regular-letter-spacing);
+      line-height: var(--paragraph-p3-regular-line-height);
+      font-style: var(--paragraph-p3-regular-font-style);
+    }
+
+    .portfolio .rectangle-3 {
+      position: relative;
+      width: 2px;
+      height: 2px;
+      background-color: var(--neutral-300);
+    }
+
+    .portfolio .icon-6 {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      margin-top: -4218.72px;
+      margin-left: -12587px;
+    }
+
+    .portfolio .icon-7 {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      margin-top: -4218.72px;
+      margin-left: -12840.33px;
+    }
+
+    .portfolio .icon-8 {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      margin-top: -4218.72px;
+      margin-left: -12779.33px;
+    }
+
+    .portfolio .union {
+      position: relative;
+      width: 1px;
+      height: 1px;
+      margin-top: -3574.72px;
+      margin-left: -12165px;
+    }
+
+    .portfolio .payment-form {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    .portfolio .payment-form-2 {
+      display: flex;
+      flex-direction: column;
+      width: 427px;
+      height: 649px;
+      align-items: flex-start;
+      gap: 50px;
+      padding: 40px;
+      position: relative;
+      background-color: var(--dark-themesection-color);
+      border-radius: 10px;
+    }
+
+    .portfolio .fees {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-right: -5px;
+      align-items: flex-start;
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    .portfolio .input {
+      flex-direction: column;
+      width: 352px;
+      align-items: flex-start;
+      gap: 40px;
+      display: flex;
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    .portfolio .market-change-option {
+      display: flex;
+      align-items: center;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+    }
+
+    .portfolio .balance {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      position: relative;
+      flex: 1;
+      align-self: stretch;
+      flex-grow: 1;
+    }
+
+    .portfolio .price-4 {
+      position: relative;
+      flex: 1;
+      font-family: var(--paragraph-p2-regular-font-family);
+      font-weight: var(--paragraph-p2-regular-font-weight);
+      color: var(--neutralheading-gray-50);
+      font-size: var(--paragraph-p2-regular-font-size);
+      letter-spacing: var(--paragraph-p2-regular-letter-spacing);
+      line-height: var(--paragraph-p2-regular-line-height);
+      font-style: var(--paragraph-p2-regular-font-style);
+    }
+
+    .portfolio .input-filed-wrapper {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      align-self: stretch;
+      width: 100%;
+      display: flex;
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    .portfolio .input-filed {
+      align-items: center;
+      padding: 10px;
+      align-self: stretch;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid;
+      border-color: #ccced926;
+      display: flex;
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    .portfolio .quantity-BTC {
+      position: relative;
+      width: fit-content;
+      margin-top: -1px;
+      font-family: var(--paragraph-p1-regular-font-family);
+      font-weight: var(--paragraph-p1-regular-font-weight);
+      color: var(--neutralparagraph-gray-500);
+      font-size: var(--paragraph-p1-regular-font-size);
+      letter-spacing: var(--paragraph-p1-regular-letter-spacing);
+      line-height: var(--paragraph-p1-regular-line-height);
+      white-space: nowrap;
+      font-style: var(--paragraph-p1-regular-font-style);
+    }
+
+    .portfolio .price-5 {
+      display: inline-flex;
+      align-items: flex-start;
+      gap: 5px;
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    .portfolio .rectangle-4 {
+      position: relative;
+      width: 1px;
+      height: 24px;
+      background-color: var(--neutralheading-gray-50);
+    }
+
+    .portfolio .coin {
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    .portfolio .coin-2 {
+      position: relative;
+      width: 25px;
+      height: 25px;
+    }
+
+    .portfolio .text-icon {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    .portfolio .text-wrapper-6 {
+      position: relative;
+      width: fit-content;
+      font-family: var(--paragraph-p1-regular-font-family);
+      font-weight: var(--paragraph-p1-regular-font-weight);
+      color: var(--typography-white);
+      font-size: var(--paragraph-p1-regular-font-size);
+      letter-spacing: var(--paragraph-p1-regular-letter-spacing);
+      line-height: var(--paragraph-p1-regular-line-height);
+      white-space: nowrap;
+      font-style: var(--paragraph-p1-regular-font-style);
+    }
+
+    .portfolio .div-wrapper {
+      display: flex;
+      width: 352px;
+      gap: 8px;
+      align-items: flex-start;
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    .portfolio .text-wrapper-7 {
+      position: relative;
+      width: fit-content;
+      margin-top: -1px;
+      font-family: var(--paragraph-p1-regular-font-family);
+      font-weight: var(--paragraph-p1-regular-font-weight);
+      color: var(--neutral-500);
+      font-size: var(--paragraph-p1-regular-font-size);
+      letter-spacing: var(--paragraph-p1-regular-letter-spacing);
+      line-height: var(--paragraph-p1-regular-line-height);
+      white-space: nowrap;
+      font-style: var(--paragraph-p1-regular-font-style);
+    }
+
+    .portfolio .register-button {
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      height: 60px;
+      background-color: var(--primarycta-700);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .portfolio .ellipse {
+      position: absolute;
+      width: 28px;
+      height: 7px;
+      top: -3783px;
+      left: -13207px;
+    }
+
+    .portfolio .register {
+      position: absolute;
+      top: 18px;
+      left: 103px;
+      font-family: var(--paragraph-p3-medium-font-family);
+      font-weight: var(--paragraph-p3-medium-font-weight);
+      color: var(--typography-white);
+      font-size: var(--paragraph-p3-medium-font-size);
+      text-align: center;
+      letter-spacing: var(--paragraph-p3-medium-letter-spacing);
+      line-height: var(--paragraph-p3-medium-line-height);
+      white-space: nowrap;
+      font-style: var(--paragraph-p3-medium-font-style);
+    }
+
+    .portfolio .register-button-2 {
+      width: 347px;
+      height: 59px;
+      background-color: var(--primarycta-700);
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .portfolio .ellipse-2 {
+      height: 6px;
+      top: -3894px;
+      position: absolute;
+      width: 28px;
+      left: -13207px;
+    }
+
+    .portfolio .register-2 {
+      position: absolute;
+      top: 18px;
+      left: 98px;
+      font-family: var(--paragraph-p3-medium-font-family);
+      font-weight: var(--paragraph-p3-medium-font-weight);
+      color: var(--typography-white);
+      font-size: var(--paragraph-p3-medium-font-size);
+      text-align: center;
+      letter-spacing: var(--paragraph-p3-medium-letter-spacing);
+      line-height: var(--paragraph-p3-medium-line-height);
+      white-space: nowrap;
+      font-style: var(--paragraph-p3-medium-font-style);
+    }
+
+    .portfolio .button {
+      align-self: stretch;
+      width: 100%;
+      height: 64px;
+      background-color: #e55151;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      all: unset;
+      box-sizing: border-box;
+    }
+
+    .portfolio .ellipse-3 {
+      height: 7px;
+      top: -3999px;
+      position: absolute;
+      width: 28px;
+      left: -13207px;
+    }
+
+    .portfolio .register-3 {
+      position: absolute;
+      top: 20px;
+      left: 152px;
+      font-family: var(--paragraph-p3-medium-font-family);
+      font-weight: var(--paragraph-p3-medium-font-weight);
+      color: var(--typography-white);
+      font-size: var(--paragraph-p3-medium-font-size);
+      text-align: center;
+      letter-spacing: var(--paragraph-p3-medium-letter-spacing);
+      line-height: var(--paragraph-p3-medium-line-height);
+      white-space: nowrap;
+      font-style: var(--paragraph-p3-medium-font-style);
+    }
+
+    .portfolio .icon-9 {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 21px;
+      left: 210px;
+    }
+  </style>
+
+</head>
+
+<header>
+</header>
+
+
+
+<body>
+
+
+
+
+  <div class="portfolio">
+    <div class="div">
+      <div class="div-2">
+        <div class="heading">
+          <div class="div-3">
+            <div class="text-wrapper">Ethereum/Gamma ERC20 prediction algo</div>
+            <p class="p">Update 05/10/2023 at 02:30 PM</p>
+          </div>
+          <div class="clear-filter">
+            <div class="icon"><img class="mask" src="img/mask-2.svg" /></div>
+            <div class="clear-filter-2">Edit</div>
+          </div>
+        </div>
+        <div class="payment-details">
+          <div class="price">
+            <div class="heading-2">
+              <div class="icon"><img class="img" src="img/icon-8.svg" /></div>
+              <div class="text-wrapper-2">Available Balance</div>
+              <div class="text-wrapper-3">{{balance_in_wei}}</div>
+            </div>
+
+            {% block content %}
+            {% for message in get_flashed_messages() %}
+
+            <div class="alert alert-warning">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              {{ message }}
+          </div>
+            {% endfor %}
+          {% block page_content %}{% endblock %}
+            <div class="frame">
+              <form action="/create" accept-charset="UTF-8" method="post">
+                <input type="text" class="input-filed" name="Create Username" placeholder="Create Username">
+                <input type="password" class="input-filed" name="Create Password" placeholder="Create Password">
+                <input type="password" class="input-filed" name="Confirm Password" placeholder="Confirm Password">
+                <button type="submit" class="register-button">
+                  <div class="register">Create User</div>
+                </button>
+              </form>
+              {% endblock %}
+              <!-- <div class="text-wrapper-2">Provided Address</div>
+              <div class="text-wrapper-3">{{mint_acct}}</div>
+              <div class="heading-3">
+                <div class="text-wrapper-2">Tokens Per Eth</div>
+                <div class="text-wrapper-3">{{price}}</div>
+                <div class="icon-2"><img class="mask-2" src="img/mask-3.svg" /></div>
+              </div> -->
+            </div>
+
+
+          </div>
+          <!-- <div class="market-cap">
+            <div class="div-4">
+              <div class="heading-2">
+                <div class="icon"><img class="icon-3" src="img/icon-9.svg" /></div>
+                <div class="text-wrapper-2">Contract Address</div>
+                <div class="text-wrapper-3">{{cntr}}</div>
+
+
+              </div>
+              <div class="price-3">
+                <div class="text-wrapper-2">Contract Token Balance</div>
+                <div class="text-wrapper-3">{{contract_bal}}</div>
+
+                <div class="increase-percentage">
+                  <div class="text-wrapper-4">+2%</div>
+                  <img class="icon-4" src="img/icon-3.png" />
+                </div>
+              </div>
+            </div> -->
+            <!-- <div class="div-4">
+              <div class="heading-2">
+                <div class="icon"><img class="icon-3" src="img/image.svg" /></div>
+                <div class="text-wrapper-2">Total Return</div>
+              </div>
+              <div class="price-3">
+                <div class="text-wrapper-3">$32,455.12</div>
+                <div class="increase-percentage-2">
+                  <div class="text-wrapper-5">-28%</div>
+                  <img class="icon-5" src="img/image.png" />
+                </div>
+              </div>
+            </div> -->
+            <!-- <div class="div-4">
+              <div class="heading-2">
+                <div class="icon"><img class="mask-3" src="img/mask-4.svg" /></div>
+                <p class="text-wrapper-2">All Time Profit / Loss</p>
+              </div>
+              <div class="price-3">
+                <div class="text-wrapper-3">$2,000.12</div>
+                <div class="increase-percentage-3">
+                  <div class="text-wrapper-4">+2%</div>
+                  <img class="icon-2" src="img/icon-3.svg" />
+                </div>
+              </div>
+            </div> -->
+          <!-- </div>
+        </div>
+      </div>
+      <div class="div-2">
+        <div class="heading">
+          <div class="div-3">
+            <div class="component">
+              <div class="rectangle"></div>
+              <div class="tab">
+                <div class="div-5">
+                  <div class="buy-BTC">1 minute chart</div>
+                  <div class="rectangle-2"></div>
+                </div>
+              </div>
+            </div>
+            <p class="p">Update 05/10/2023 at 02:30 PM</p>
+            <div class="register-button-2">
+              <img class="ellipse-2" src="img/ellipse-1.svg" />
+              <form action="/predict_ethereum" accept-charset="UTF-8" method="post">
+
+                <button type="submit">
+                  <div class="register-2">Fetch Predictions</div>
+                </button>
+
+
+              </form>
+            </div>
+          </div>
+          <div class="clear-filter">
+            <div class="icon"><img class="mask" src="img/mask-5.svg" /></div>
+            <div class="clear-filter-2">Edit</div>
+          </div>
+        </div> -->
+
+        <!-- <div class="payment-details">
+          <div class="price">
+            <div class="heading-2">
+              <div class="icon"><img class="img" src="img/icon-7.svg" /></div>
+              <div class="text-wrapper-2">Available Balance</div>
+            </div>
+            <div class="frame">
+              <div class="price-2">$32,455.12</div>
+              <div class="heading-3">
+                <div class="icon-2"><img class="mask-2" src="img/mask-6.svg" /></div>
+              </div>
+            </div>
+          </div> -->
+        <!-- <div class="market-cap">
+
+          <div class="div-4">
+            <div class="heading-2">
+              <div class="icon"><img class="icon-3" src="img/icon-5.svg" /></div>
+              <div class="text-wrapper-2">Open Prediction
+                <br />
+                accuracy{{o_acc}}
+              </div>
+            </div>
+            <div class="price-3">
+              <div class="text-wrapper-3">{{o}} </div>
+              <div class="increase-percentage">
+                <div class="text-wrapper-4">+2%</div>
+                <img class="icon-6" src="img/icon-4.png" />
+              </div>
+            </div>
+          </div>
+
+          <div class="div-4">
+            <div class="heading-2">
+              <div class="icon"><img class="icon-3" src="img/icon-5.svg" /></div>
+              <div class="text-wrapper-2">High Prediction
+                <br />
+                accuracy{{h_acc}}
+              </div>
+            </div>
+            <div class="price-3">
+              <div class="text-wrapper-3">{{h}}</div>
+              <div class="increase-percentage">
+                <div class="text-wrapper-4">+2%</div>
+                <img class="icon-6" src="img/icon-4.png" />
+              </div>
+            </div>
+          </div>
+          <div class="div-4">
+            <div class="heading-2">
+              <div class="icon"><img class="icon-3" src="img/icon-2.svg" /></div>
+              <div class="text-wrapper-2">Low Prediction
+                <br />
+                accuracy{{l_acc}}
+              </div>
+            </div>
+            <div class="price-3">
+              <div class="text-wrapper-3">{{l}}</div>
+              <div class="increase-percentage-2">
+                <div class="increase-percentage-3"><img class="icon-7" src="img/icon.png" /></div>
+                <div class="text-wrapper-5">-28%</div>
+                <img class="icon-8" src="img/icon-2.png" />
+              </div>
+            </div>
+          </div>
+          <div class="div-4">
+            <div class="heading-2">
+              <div class="icon"><img class="mask-3" src="img/mask.svg" /></div>
+              <div class="text-wrapper-2">Close Predictions
+                <br />
+                accuracy{{c_acc}}
+              </div>
+            </div>
+            <div class="price-3">
+              <div class="text-wrapper-3">{{c}}</div>
+              <div class="increase-percentage-3">
+                <div class="text-wrapper-4">+2%</div>
+                <img class="icon-2" src="img/icon-3.svg" />
+              </div>
+            </div>
+          </div>
+          <br />
+        </div>
+        <div class="div-3">
+          <div class="div-5">
+            <div class="buy-BTC">5 minute chart</div>
+            <div class="rectangle-2"></div>
+          </div>
+          <p class="p">Update 05/10/2023 at 02:30 PM</p>
+          <div class="register-button-2">
+            <div class="component">
+              <div class="rectangle"></div>
+              <div class="tab">
+                <div class="div-5">
+                  <div class="buy-BTC">5 minute chart</div>
+                  <div class="rectangle-2"></div>
+                </div>
+              </div>
+            </div>
+            <form action="/predict_ethereum5" accept-charset="UTF-8" method="post">
+
+              <button type="submit">
+                <div class="register-2">Fetch Predictions</div>
+              </button>
+            </form>
+          </div>
+
+        </div>
+        <div class="market-cap">
+
+          <div class="div-4">
+            <div class="heading-2">
+              <div class="icon"><img class="icon-3" src="img/icon-5.svg" /></div>
+              <div class="text-wrapper-2">Open Prediction
+                <br />
+                accuracy{{o5_acc}}
+              </div>
+            </div>
+            <div class="price-3">
+              <div class="text-wrapper-3">{{o5}} </div>
+              <div class="increase-percentage">
+                <div class="text-wrapper-4">+2%</div>
+                <img class="icon-6" src="img/icon-4.png" />
+              </div>
+            </div>
+          </div>
+
+          <div class="div-4">
+            <div class="heading-2">
+              <div class="icon"><img class="icon-3" src="img/icon-5.svg" /></div>
+              <div class="text-wrapper-2">High Prediction
+                <br />
+                accuracy{{h5_acc}}
+              </div>
+            </div>
+            <div class="price-3">
+              <div class="text-wrapper-3">{{h5}}</div>
+              <div class="increase-percentage">
+                <div class="text-wrapper-4">+2%</div>
+                <img class="icon-6" src="img/icon-4.png" />
+              </div>
+            </div>
+          </div>
+          <div class="div-4">
+            <div class="heading-2">
+              <div class="icon"><img class="icon-3" src="img/icon-2.svg" /></div>
+              <div class="text-wrapper-2">Low Prediction
+                <br />
+                accuracy{{l5_acc}}
+              </div>
+            </div>
+            <div class="price-3">
+              <div class="text-wrapper-3">{{l5}}</div>
+              <div class="increase-percentage-2">
+                <div class="increase-percentage-3"><img class="icon-7" src="img/icon.png" /></div>
+                <div class="text-wrapper-5">-28%</div>
+                <img class="icon-8" src="img/icon-2.png" />
+              </div>
+            </div>
+          </div>
+          <div class="div-4">
+            <div class="heading-2">
+              <div class="icon"><img class="mask-3" src="img/mask.svg" /></div>
+              <div class="text-wrapper-2">Close Predictions
+                <br />
+                accuracy{{c5_acc}}
+              </div>
+            </div>
+            <div class="price-3">
+              <div class="text-wrapper-3">{{c5}}</div>
+              <div class="increase-percentage-3">
+                <div class="text-wrapper-4">+2%</div>
+                <img class="icon-2" src="img/icon-3.svg" />
+              </div>
+            </div>
+          </div>
+          <br />
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <img class="union" src="img/union.svg" />
+  </div>
+  <div class="payment-form">
+    <div class="payment-form-2">
+      <div class="fees"> -->
+        <!-- <div class="input">
+            <div class="market-change-option">
+              <div class="balance">
+                <div class="icon"><img class="img" src="img/icon-4.svg" /></div>
+                <div class="price-4">$38,447.54</div>
+              </div>
+            </div>
+            <div class="input-filed-wrapper">
+              <div class="input-filed">
+                <div class="div-3">
+                  <div class="quantity-BTC">Change</div>
+                  <div class="price-5">
+                    <div class="rectangle-4"></div>
+                    <div class="text-wrapper-3">$40,455.25</div>
+                  </div>
+                </div>
+                <div class="coin">
+                  <img class="coin-2" src="img/coin.svg" />
+                  <div class="text-icon">
+                    <div class="text-wrapper-6">USD</div>
+                    <img class="icon" src="img/icon.svg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        <div class="div-wrapper">
+          <div class="text-wrapper-7">No extra fees:</div>
+        </div>
+      </div>
+      <!-- <div class="register-button">
+          <img class="ellipse" src="img/ellipse-1-2.svg" />
+          <div class="register">Deposit Money</div>
+        </div> -->
+      <!-- <button class="button">
+          <img class="ellipse-3" src="img/ellipse-1-3.svg" />
+          <div class="register-3">Start</div>
+          <img class="icon-9" src="img/icon-6.svg" />
+        </button> -->
+    </div>
+  </div>
+  </div>
+
+
+  <!-- <div>
+    Ethereum Predictions <br />
+    <h7>Contracts Loading...</h7>>
+  </div>
+
+  1 minute chart Predictions, Data will be updated every hour
+  <br />Open Prediction: {{o}}->accuracy{{o_acc}}<br />
+  <br />High Prediction: {{h}}->accuracy{{h_acc}}<br />
+  <br />Low Prediction: {{l}}->accuracy{{l_acc}}<br />
+  <br />Close Prediction: {{c}}->accuracy{{c_acc}}<br />
+  <br />Order Book: {{order_book}}<br />
+
+  </div> -->
+</body>
+
+
+</html>
